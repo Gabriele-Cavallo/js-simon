@@ -4,9 +4,20 @@
 
 // Stampo in pagina 5 numeri che spariscono dopo 30 secondi
     // - Creo un arrayComputer vuoto
+    let arrayComputer = [];
+    console.log('array-compuer' , arrayComputer);
     // - Creo l'elemento del DOM in cui stampare i numeri
+    const arrayNumber = document.querySelector('#numbers-array');
+    console.log('array-number' , arrayNumber);
     // - Genero numeri casuali da 1 a 100 e li inserisco nell'arrayComputer
-        // solo se non sono già presenti nell'array
+        // solo se non sono già presenti nell'array e se non ho raggiunto i 5 numeri totali
+        while (arrayComputer.length < 5){
+            let randomNumber = Math.floor((Math.random() * 100) + 1);
+            if(!arrayComputer.includes(randomNumber)){
+                arrayComputer.push(randomNumber);
+            }
+        }
+        console.log('array-comp' , arrayComputer);
     // - Popolo l'elemento del DOM con l'array
     // - Dopo 30 secondi i numeri spariscono
         // - svuoto l'array

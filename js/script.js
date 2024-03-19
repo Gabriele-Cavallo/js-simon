@@ -23,6 +23,9 @@
     // - Dopo 30 secondi i numeri spariscono
         // - svuoto l'array
         // - popolo l'elemento del DOM con una stringa vuota
+        setTimeout(function(){
+            arrayNumber.innerHTML = '';
+        }, 30000)
 // Dopo che i numeri sono scompari chiedo all'utente i 5 numeri con 5 prompt
     // - Creo un arrayUser vuoto in cui salvo i numero che chiedo all'utente
     // - Dopo 30 secondi dal caricamento della pagina per 5 volte devo chiedere all'utente di inserire uno dei numeri che ha visto precedentemente

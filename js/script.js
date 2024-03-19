@@ -25,11 +25,20 @@
         // - popolo l'elemento del DOM con una stringa vuota
         setTimeout(function(){
             arrayNumber.innerHTML = '';
-        }, 30000)
+        }, 3000)
 // Dopo che i numeri sono scompari chiedo all'utente i 5 numeri con 5 prompt
     // - Creo un arrayUser vuoto in cui salvo i numero che chiedo all'utente
+    let arrayUser = [];
+    console.log('array-user' , arrayUser);
     // - Dopo 30 secondi dal caricamento della pagina per 5 volte devo chiedere all'utente di inserire uno dei numeri che ha visto precedentemente
         // - Pusho i numeri che l'utente ha inserito nell'arrayUser
+        setTimeout(function(){
+            for (let i = 0; i < 5; i++) {
+                let userNumber = parseInt(prompt('Dimmi un numero'));
+                arrayUser.push(userNumber);
+            }
+            console.log('array-user' , arrayUser);
+        }, 3100)
 // Stampo quanti e quali numeri l'utente ha indovinato
     // - Creo un arrayResult vuoto
         // - pusho nell'arrayResult se sono presenti sia nel computerArray e nell' userArray

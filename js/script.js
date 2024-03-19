@@ -19,6 +19,7 @@
         }
         console.log('array-comp' , arrayComputer);
     // - Popolo l'elemento del DOM con l'array
+    arrayNumber.innerHTML = arrayComputer;
     // - Dopo 30 secondi i numeri spariscono
         // - svuoto l'array
         // - popolo l'elemento del DOM con una stringa vuota

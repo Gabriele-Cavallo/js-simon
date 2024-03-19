@@ -5,10 +5,8 @@
 // Stampo in pagina 5 numeri che spariscono dopo 30 secondi
     // - Creo un arrayComputer vuoto
     let arrayComputer = [];
-    console.log('array-compuer' , arrayComputer);
     // - Creo l'elemento del DOM in cui stampare i numeri
     const arrayNumber = document.querySelector('#numbers-array');
-    console.log('array-number' , arrayNumber);
     // - Genero numeri casuali da 1 a 100 e li inserisco nell'arrayComputer
         // solo se non sono già presenti nell'array e se non ho raggiunto i 5 numeri totali
         while (arrayComputer.length < 5){
@@ -17,7 +15,6 @@
                 arrayComputer.push(randomNumber);
             }
         }
-        console.log('array-comp' , arrayComputer);
     // - Popolo l'elemento del DOM con l'array
     arrayNumber.innerHTML = arrayComputer;
     // - Dopo 30 secondi i numeri spariscono
@@ -29,11 +26,9 @@
 // Dopo che i numeri sono scompari chiedo all'utente i 5 numeri con 5 prompt
     // - Creo un arrayUser vuoto in cui salvo i numero che chiedo all'utente
     let arrayUser = [];
-    console.log('array-user' , arrayUser);
     // Stampo quanti e quali numeri l'utente ha indovinato
     // - Creo un arrayResult vuoto
     let arrayResult = [];
-    console.log('array-result' , arrayResult);
     // - Dopo 30 secondi dal caricamento della pagina per 5 volte devo chiedere all'utente di inserire uno dei numeri che ha visto precedentemente
         // - Pusho i numeri che l'utente ha inserito nell'arrayUser
         setTimeout(function(){
@@ -47,8 +42,6 @@
             // - popolo l'elemento del DOM con arrayResult e la lunghezza dell'arrayResult per indicare quanti sono stati indovinati
             arrayNumber.innerHTML = `${arrayResult} Hai indovinato ${arrayResult.length} numeri su 5!!!`;
             }
-            console.log('array-result' , arrayResult);
-            console.log('array-user' , arrayUser);
         }, 30500)
 
         

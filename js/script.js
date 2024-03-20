@@ -34,11 +34,13 @@
         setTimeout(function(){
             for (let i = 0; i < 5; i++) {
                 let userNumber = parseInt(prompt('Dimmi uno dei numeri indicati prima!'));
-                arrayUser.push(userNumber);
-            // - pusho nell'arrayResult i numeri inseriti dall'utente solo se sono presenti sia nel arrayComputer e nell' arrayUser
-            if (arrayComputer.includes(userNumber) && arrayUser.includes(userNumber)){
-                arrayResult.push(userNumber);
-            }
+                if (!arrayUser.includes(userNumber)){
+                    arrayUser.push(userNumber);
+                    // - pusho nell'arrayResult i numeri inseriti dall'utente solo se sono presenti sia nel arrayComputer e nell' arrayUser
+                    if (arrayComputer.includes(userNumber) && arrayUser.includes(userNumber)){
+                        arrayResult.push(userNumber);
+                    }
+                }
             // - popolo l'elemento del DOM con arrayResult e la lunghezza dell'arrayResult per indicare quanti sono stati indovinati
             arrayNumber.innerHTML = `${arrayResult} Hai indovinato ${arrayResult.length} numeri su 5!!!`;
             }
